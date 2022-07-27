@@ -70,6 +70,8 @@ PA_MODULE_USAGE(
 #define MEMBLOCKQ_MAXLENGTH (16*1024*1024)
 #define DEFAULT_AUTOLOADED false
 
+
+#define PA_SINK_SHARE_VOLUME_WITH_MASTER 0
 struct userdata {
     pa_module *module;
 

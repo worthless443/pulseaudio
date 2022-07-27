@@ -18,6 +18,8 @@
   along with PulseAudio; if not, see <http://www.gnu.org/licenses/>.
 ***/
 
+
+
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
@@ -43,7 +45,6 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <signal.h>
-
 #ifdef __linux__
 #include <linux/sockios.h>
 #endif
@@ -54,7 +55,6 @@
 #include <pulsecore/core-util.h>
 #include <pulsecore/sample-util.h>
 
-/* On some systems SIOCINQ isn't defined, but FIONREAD is just an alias */
 #if !defined(SIOCINQ) && defined(FIONREAD)
 # define SIOCINQ FIONREAD
 #endif
@@ -62,6 +62,7 @@
 /* make sure gcc doesn't redefine open and friends as macros */
 #undef open
 #undef open64
+
 
 typedef enum {
     FD_INFO_MIXER,
@@ -2745,3 +2746,4 @@ int fclose(FILE *f) {
     LOAD_FCLOSE_FUNC();
     return _fclose(f);
 }
+

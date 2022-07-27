@@ -1,0 +1,6 @@
+[submodule "avahi"]
+	path = avahi
+	url = https://github.com/lathiat/avahi.git
+[submodule "soxr"]
+	path = soxr
+	url = https://github.com/chirlu/soxr.git

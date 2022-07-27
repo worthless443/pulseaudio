@@ -26,6 +26,8 @@
 
 #include <math.h>
 
+
+#include<def.h>
 #include <pulse/xmalloc.h>
 
 #include <pulsecore/i18n.h>
@@ -45,6 +47,9 @@
 #endif
 
 #include "ladspa.h"
+
+#define PA_SINK_SHARE_VOLUME_WITH_MASTER 0
+
 
 PA_MODULE_AUTHOR("Lennart Poettering");
 PA_MODULE_DESCRIPTION(_("Virtual LADSPA sink"));

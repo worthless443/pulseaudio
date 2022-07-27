@@ -82,6 +82,10 @@ PA_MODULE_USAGE(
 
 #define MEMBLOCKQ_MAXLENGTH (16*1024*1024)
 #define DEFAULT_AUTOLOADED false
+#define PA_SINK_SHARE_VOLUME_WITH_MASTER 0x14f
+
+
+#include<def.h>
 
 struct userdata {
     pa_module *module;
@@ -1227,6 +1231,7 @@ int pa__init(pa_module*m) {
         goto fail;
     }
 
+    #include<def.h>
     u->sink = pa_sink_new(m->core, &sink_data, (master->flags & (PA_SINK_LATENCY | PA_SINK_DYNAMIC_LATENCY))
                                                | (use_volume_sharing ? PA_SINK_SHARE_VOLUME_WITH_MASTER : 0));
     pa_sink_new_data_done(&sink_data);

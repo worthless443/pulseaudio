@@ -97,6 +97,7 @@ typedef enum {
 #define DEFAULT_ECHO_CANCELLER "speex"
 #endif
 
+#define PA_SINK_SHARE_VOLUME_WITH_MASTER 0
 static const pa_echo_canceller ec_table[] = {
     {
         /* Null, Dummy echo canceller (just copies data) */
