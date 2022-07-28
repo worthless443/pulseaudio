@@ -1,0 +1,4 @@
+#!/bin/bash
+getlibname() { [ -e $1 ] && echo "no input" || echo $1 | awk -F. '{print $1}' | grep --color=auto -Po '(b>*)(.*)' | grep --color=auto -Po '[^b]*'; }
+
+getlibname $1

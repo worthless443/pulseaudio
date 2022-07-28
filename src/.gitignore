@@ -7,7 +7,6 @@ TAGS
 *.log
 .deps
 .libs
-/Makefile
 /Makefile.in
 client.conf
 daemon.conf
